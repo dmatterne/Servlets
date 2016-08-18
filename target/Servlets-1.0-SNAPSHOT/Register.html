@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Register Personal Website</title>
+
+    <script src="jquery-3.1.0.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <form id="Contact"  class="form-horizontal" role="form" method="post" action="/doRegister">
+        <!--NOTE: This is added for file upload -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div class="form-group">
+
+                <label for="vnaam" class="form-label">Voornaam :</label>
+                <input type="text" id="vnaam" name="Voornaam" placeholder="Enter voornaam hier:"  class="form-control" />
+            </div>
+            <div class="form-group">
+
+                <label for="anaam" class="form-label ">Achternaam : </label>
+                <input type="text" id="anaam" name="Achternaam" placeholder="Enter achternaam hier:"
+                         class="form-control" />
+            </div>
+            <div class="form-group">
+
+                <label for="DOB" class="form-label">Geboortedatum: </label>
+                <input type="date" id="DOB" name="DateOB"   class="form-control"/>
+
+                <!--<label for="email">E-mail: </label><input type="email" id="email" name="EmailAddress" size="50"/>-->
+                <!--<label for="reason">Reden: </label><input type="checkbox" id="reason" name="Reden" value="Test"/>Test <input type="checkbox" name="Reden" value="Test2"/>Test2 -->
+            </div>
+            <div class="form-group">
+
+                <label for="geslacht" class="form-label">Gender: </label>
+
+            <div class="radio-inline">
+
+
+                <input type="radio" name="Gender" value="M" checked  /> Man
+            </div>
+            <div class="radio-inline">
+                <input type="radio" id="geslacht"
+                       name="Gender" value="F"   />Vrouw
+            </div>
+            <div class="radio-inline">
+                <input type="radio" name="Gender" value="O"  /> Ander
+            </div>
+                </div>
+            <div class="form-group">
+
+                <label for="country" class="form-label">Country: </label>
+                <select name="country" id="country" class="form-control" >
+                    <option value='be'>Belgium</option>
+                    <option value='nl'>Netherlands</option>
+                    <option value='fr'>France</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <!--<label for="bestand">Attach File: </label><input type="file" id="bestand" name="file" />-->
+                <!--<label for="comment">Comment: </label><textarea id="comment" name="comment" form="Contact">Enter text here...</textarea>-->
+
+                <input type="submit" name="submit" value="Submit"  class="btn btn-primary" /><input type="reset" name="reset"
+                                                                         value="Reset"  class="btn btn-danger"/>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+</body>
+
+</html>
