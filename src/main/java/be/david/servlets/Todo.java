@@ -108,7 +108,7 @@ public class Todo extends HttpServlet {
         }
 
 
-        resp.sendRedirect("/todo.html");
+        resp.sendRedirect("/todo.jsp");
 
 
     }

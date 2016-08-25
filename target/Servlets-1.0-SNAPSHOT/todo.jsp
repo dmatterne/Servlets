@@ -1,8 +1,8 @@
 <%@ page import="java.util.ArrayList" %>
 <%!
-    private static final String MY_TODO_LIST_ATTRIBUTE = ;
+    private static final String MY_TODO_LIST_ATTRIBUTE = "list";
 %><%
-    HttpSession h = request.getSession();
+
 
 %>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 <div class='container'>
 
 
-    <form class='form-horizontal' role='form' method='post' action=''>
+    <form class='form-horizontal' role='form' method='post' action='/todo.html'>
 
 
         <fieldset>
@@ -39,7 +39,7 @@
     </form>
 
     <%
-        ArrayList<String> lists = (ArrayList<String>) h.getAttribute(MY_TODO_LIST_ATTRIBUTE);
+        ArrayList<String> lists = (ArrayList<String>) session.getAttribute(MY_TODO_LIST_ATTRIBUTE);
 
         if (lists != null) {
             out.println("<ol>");
@@ -52,10 +52,10 @@
             out.println("</ol>");
 
         }
+
+        // ArrayList<String> list = (ArrayList<String>) h.getAttribute("list");
     %>
-    // ArrayList
-    <String> list = (ArrayList
-        <String>) h.getAttribute("list");
+
 
 
 </div>
